@@ -12,7 +12,7 @@ console.log(dateOfBirth);
 console.log(typeof(isMarriged));
 console.log(typeof(gender));
 console.log(typeof(PI));
-console.log(PI); */     
+console.log(PI); */
 
 // ! String = "",'',``;
 /*
@@ -42,7 +42,7 @@ console.log('email :>> ', email.toLowerCase());
 
 // let email = "Koko@gmail.com";
 // let paragraph = "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus, ducimus?";
-// console.log("=>>" ,paragraph.split(" "));  // * * splitဆိုတာ string ကို aray ပြောင်းခြင်း 
+// console.log("=>>" ,paragraph.split(" "));  // * * splitဆိုတာ string ကို aray ပြောင်းခြင်း
 // let paragraphLorem =  "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus, ducimus?";
 // console.log(Lorem = paragraphLorem.split(","));
 // console.log(Lorem[2]);
@@ -56,12 +56,11 @@ console.log('email :>> ', email.toLowerCase());
 // console.log('url :>> ', url.substr(0,16)); // ** substr ကလည်းဖျက်တာ (start,length)
 // console.log('email :>> ', email.includes('g')); // ** includes method က ပါလားမပါလားစစ်တာ သူက boolean နဲ့ output ပြန်ထုတ်ပေးတယ်
 // console.log('email :>> ', email.replace('Koko',"MaungMaung")); // ** ကိုယ်ဖယ်ချင်တဲ့နေရာမှာ နောက်တစ်ခုနဲ့အစားထိုးခြင်
-// console.log('email :>> ', email.includes('e')); 
+// console.log('email :>> ', email.includes('e'));
 // let number = 230.3343434;
 // console.log(number.toFixed(2));
 
-
-// !object 
+// !object
 // const user = {
 //     name : 'koko',
 //     age : 23,
@@ -98,11 +97,10 @@ console.log('email :>> ', email.toLowerCase());
 //     {id:9,name:'thu',age:24,gender:'female',address:'yangon',isStatus:true},
 
 // ]
-// let toJson = JSON.stringify(userList);  //!array to json ပြောင်းခြင်း 
+// let toJson = JSON.stringify(userList);  //!array to json ပြောင်းခြင်း
 // // console.log(toJson);
 // let toarray = JSON.parse(toJson);
 // console.log(toarray);
-
 
 // const dice ={
 //     sides : 6,
@@ -144,7 +142,6 @@ console.log('email :>> ', email.toLowerCase());
 // console.log(item.size)
 // console.log(item.get('name'));
 
-
 // item.forEach((k,v)=>{
 //     console.log(`key is ${k} , value is ${v}`)
 // })
@@ -152,7 +149,6 @@ console.log('email :>> ', email.toLowerCase());
 // console.log(mySet);
 
 // !"use strict";
-
 
 // !  ternary operator
 // let result = (a===b) ? true : false;
@@ -179,37 +175,247 @@ console.log('email :>> ', email.toLowerCase());
 // }
 // let users = ['john','james','smith','rose','hellen','nono'];
 // for(let i=0;i<users.length;i++){
-//     // console.log('users',users[0])
-//     // console.log('i',users[i]);
+// console.log('users',users[0])
+// console.log('i',users[i]);
 //     let user = users[i];
 //     if(user === 'smith')break;
 //     console.log(user);
 // }
 
 const userList = [
-    {id:1,name:'bobo',age:22,gender:'male',adddress:"yangon",isStatus:true},
-    {id:2,name:'nono',age:32,gender:'female',adddress:"yangon",isStatus:true},
-    {id:3,name:'popo',age:20,gender:'female',adddress:"mdy",isStatus:false},
-    {id:4,name:'james',age:19,gender:'male',adddress:"mdy",isStatus:false},
-    {id:5,name:'momo',age:16,gender:'female',adddress:"bago",isStatus:false},
-    {id:6,name:'lana',age:27,gender:'female',adddress:"bago",isStatus:false},
-    {id:7,name:'kiki',age:35,gender:'female',adddress:"yangon",isStatus:true},
-    {id:8,name:'kohla',age:33,gender:'male',adddress:"mdy",isStatus:true},
-]
-const user = {id:1,name:'bobo',age:22,gender:'male',adddress:"yangon",isStatus:true};
+  {
+    id: 1,
+    name: "bobo",
+    age: 22,
+    gender: "male",
+    adddress: "yangon",
+    isStatus: true,
+    email:'bobo@gmail.com'
+  },
+  {
+    id: 2,
+    name: "nono",
+    age: 32,
+    gender: "female",
+    adddress: "yangon",
+    isStatus: true,
+    email:'nono@gmail.com'
+  },
+  {
+    id: 3,
+    name: "popo",
+    age: 20,
+    gender: "female",
+    adddress: "mdy",
+    isStatus: false,
+    email:'popo@gmail.com'
+  },
+  {
+    id: 4,
+    name: "james",
+    age: 19,
+    gender: "male",
+    adddress: "mdy",
+    isStatus: false,
+    email:'james@gmail.com'
+  },
+  {
+    id: 5,
+    name: "momo",
+    age: 16,
+    gender: "female",
+    adddress: "bago",
+    isStatus: false,
+    email:'momo@gmail.com'
+  },
+  {
+    id: 6,
+    name: "lana",
+    age: 27,
+    gender: "female",
+    adddress: "bago",
+    isStatus: false,
+    email:'lana@gmail.com0'
+  },
+  {
+    id: 7,
+    name: "kiki",
+    age: 35,
+    gender: "female",
+    adddress: "yangon",
+    isStatus: true,
+    email:'kiki@gmail.com'
+  },
+  {
+    id: 8,
+    name: "kohla",
+    age: 33,
+    gender: "male",
+    adddress: "mdy",
+    isStatus: true,
+    email:'kohla@gmail.com'
+  },
+];
+const user = {
+  id: 1,
+  name: "bobo",
+  age: 22,
+  gender: "male",
+  adddress: "yangon",
+  isStatus: true,
+  email:'bobo@gmail.com'
+};
 
 // ! for in loop (for in ကို object တွေကို loop ပတ်ဖို့အတွက်သုံးတယ်)
-for (let person in user){
-    console.log(person,user[person]); // person တစ်ခုပဲခေါ်မယ်ဆိုရင် properties တွေသာပြန်ပေးမယ် 
-}
+// for (let person in user) {
+//   console.log(person, user[person]); // person တစ်ခုပဲခေါ်မယ်ဆိုရင် properties တွေသာပြန်ပေးမယ်
+// }
 // ! for of(for of ကိုတော့ဆက်တိုက်ဖြစ်နေတဲ့နေရာတွေမှာသုံးတယ်)
-for (let users of userList){
-    let {name,age,adddress} = users;
-    console.log(`user name is ${name} user age is ${age} user address is ${adddress}`);
-}
+// for (let users of userList) {
+//   let { name, age, adddress } = users;
+//   console.log(
+//     `user name is ${name} user age is ${age} user address is ${adddress}`
+//   );
+// }
 // ! for loop (for loop ကိုတော့ တိကျသေချာတဲ့ iteration number တွေမှာသုံးတယ််) // ဥပမာ i= 0 မဟုတ်ပဲ i= 2 or 3
-let numbers = ['mg mg','koko','kyaw','zaw'];
-for(let i=1;i<numbers.length;i++){
-    let person = numbers[i];
-    console.log(person);
+// let numbers = ["mg mg", "koko", "kyaw", "zaw"];
+// for (let i = 1; i < numbers.length; i++) {
+//   let person = numbers[i];
+//   console.log(person);
+//}
+// !filter & map & reduce
+//filter method data တွေဆွဲထုတ်ချင်ရင်သုံးတယ်
+// const isMale = (person) =>{
+//   return person.gender === 'male';
+// }
+// const result = userList.filter(isMale);
+// console.log(result);
+
+// map method ကို arrayထဲမှာdata တွေထပ်တည့်ချင်ရင်သုံးတယ်  //react.js မှာပိုပြီးတွင်တွင်ကျယ်ကျယ်အသုံးပြုတယ်
+// const addition = userList.map(useradd=>useradd.job='programmer');
+// console.log(addition);
+// console.log(userList);
+
+//reduce method ကိုတော့ array ထဲက data တွေပေါင်းချင်ရင်သုံးတယ်
+// const numberList =[100,200,300,400,500,600]
+// const number = numberList.reduce((acc,item)=>acc + item,900);
+// console.log('number :>> ', number);
+// ** reduce ကိုသုံးရင်  parameter ၂ခုပေးရတယ်။ ရှေ့က parameter က accumulative လို့ခေါ်တဲ့ ရောက်တဲ့နေရာကိုပြတာ
+//နောက်က parameter ကတော့ ဆက်သွားနေတဲ့ iterate number ကိုပြတာ နောက်ဆုံးက 900 ကတော့ ကိုယ်ပြချင်တဲ့ default ကိုပြပေးတာ
+
+// ! function  များကိုလေ့လာခြင်း
+
+// function person(name ="john",age=23){
+//   let res = `My name is ${name},my age is ${age}`;
+//   console.log(res)
+//   document.write(res);
+
+// }
+// person('koko',34);
+// person()
+// person('maung');
+
+// ** function recurtion
+// function factorial(n){
+//   if(n <= 1){
+//     return 1;
+//   }else{
+//     return n ** factorial(n-1);
+//   }
+// };
+// console.log(factorial(1));
+// console.log(factorial(2));
+// console.log(factorial(4));
+// const fibonacci = (n) => (n <= 2 ? 1 : fibonacci(n - 1) + fibonacci(n - 2));
+// console.log(fibonacci(10));
+// 55
+
+//** higher order function  ဆိုတာ argument ကနေ data ကိုပြန်ပြီးpassion ပြန်ပေးတာ
+//**  function တစ်ခုကနေ တခြားfunction ကိုခေါ်တာ
+let factorial =function(func,x){      //this is function expression
+  return func(x);
 }
+function double(x){    //function declaration
+  return x * 2;
+}
+console.log(factorial(double,2))
+
+
+function applyFunction(func,item){
+  return func(item);
+}
+function trouble(item){
+  return item ** 2
+}
+console.log(applyFunction(trouble,3))
+
+function greeting(greet){
+  return function(name){
+    console.log(`${greet},${name}`);
+  }
+}
+const greate =greeting("hello");
+console.log(greate('PyaeSone'))
+// **higher-order function with map method
+const numbers = [2,3,4,5,6,7];
+const number = [2,4,6,8]
+function divisionNumbes(num){
+  return num % 2;
+}
+function divided(arr,divi){
+  return arr.map(divi);
+}
+console.log(divided(number,divisionNumbes));
+// ** higher-order function with filter method
+let num = [10,11,12,13,14,15,16,17,18,19,20]
+function filterFun(arr,item){
+  return arr.filter(item);
+}
+let func = filterFun(num,(numb => numb%2 != 0));
+console.log(func);
+
+// ** higher-order function with for loop
+function apply(arr,item){
+  let result = [];
+  for(let i=0;i < arr.length; i++){
+    result.push(item(arr[i]))
+  }
+  return result;
+}
+const numb = [1,2,3,4,5,6,7];
+const addition = (num) =>{
+  return num ** 3;
+}
+
+console.log(apply(numb,addition))
+
+// **closures function
+// ** closures function ဆိုတာက function scope  ထဲက function တစ်ခုကို parent functionမှာပြန်ခေါ်သုံးခြင်း
+function parentFun (outerFun){
+  return function childrenFun (innerFun){
+    console.log(outerFun + innerFun);
+  }
+}
+console.log(parentFun('Hello')('World'));
+
+function createCounter (){
+  let count = 0;
+ return{
+  increat: function(){
+    count ++;
+    console.log(count);
+  },
+  decreat: function(){
+    count --;
+    console.log(count);
+  },
+  getCount: function(){
+    console.log(count);
+  }
+ }
+}
+let counter = createCounter()
+counter.increat()
+counter.increat()
+counter.increat()
+counter.decreat()
