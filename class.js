@@ -419,3 +419,16 @@ counter.increat()
 counter.increat()
 counter.increat()
 counter.decreat()
+
+
+const employee = [
+  {id:1,name:'bobo',sallery:900000,department:"IT",DOB:"01/30/1990"},
+  {id:2,name:'mgmg',sallery:850000,department:"Account",DOB:"10/15/1992"},
+  {id:3,name:'nono',sallery:700000,department:"Finance",DOB:"02/7/2000"},
+  {id:4,name:'popo',sallery:700000,department:"IT",DOB:"04/9/2001"},
+  {id:5,name:'koko',sallery:850000,department:"Finance",DOB:"09/25/1991"},
+  {id:6,name:'aungaung',sallery:880000,department:"Finance",DOB:"09/25/1981"},
+  {id:7,name:'rose',sallery:880000,department:"Account",DOB:"09/25/1995"},
+  {id:8,name:'deny',sallery:980000,department:"IT",DOB:"09/25/1993"},
+  {id:9,name:'jolly',sallery:800000,department:"Account",DOB:"09/25/1999"},
+]
