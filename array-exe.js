@@ -103,3 +103,137 @@ const allComment = Object.values(comments).reduce((acc,user)=>{
     return {...acc, [key] : [...value,user.text]}
 },{});
 console.log('allComment :>> ', allComment);
+
+// စာအုပ်ဆိုင်တစ်ခုမှ စာအုပ်ငှားခြင်း
+function book(title,auther){
+    this.title = title;
+    this.auther = auther;
+    this.getBookInfo = function(){
+        return `title is ${this.title} and auther is ${this.auther}`
+    };
+}
+let book1 =new book('book1','nono');
+let book2 =new book('book2','popo');
+let book3 =new book('book3','aungaung');
+let book4 =new book('book4','koko');
+
+const library =new Map();
+library.set(book1,true);
+library.set(book2,false);
+library.set(book3,false);
+library.set(book4,true);
+// စာအုပ်ငှားမယ်
+function checkoutBook(book){
+    if(library.has(book)  && library.get(book)){
+        library.set(book,false);
+        console.log(`book ${book.title} checkout success`)
+    }else{
+        console.log(`book ${book.title} is not available`);
+    }
+}
+// စာအုပ်ကို ပြန်အပ်ခြင်း
+function returnBook(book){
+    if(library.has(book) &&! library.get(book)){
+        library.set(book,true);
+        console.log(`book ${book.title} return success`);
+    }else{
+        console.log(`book ${book.title} is already available`);
+    }
+}
+
+function isAvailable(book){
+    if(library.has(book)){
+        return library.get(book);
+    }else{
+        return 'not found';
+    }
+}
+
+
+checkoutBook(book1);
+checkoutBook(book2);
+returnBook(book1)
+console.log(isAvailable(book1));
+console.log(isAvailable(book2));
+console.log(isAvailable(book3));
+
+//todo list ပုံစံ test များတည်ဆောက်ခြင်း
+function tesk(id,description){
+    this.id = id;
+    this.description =description;
+    this.status = 'pending';
+    this.complete =function(){
+        this.status = 'complete';
+    };
+    this.newDescription = function(){
+        this.description = 'New Description';
+    }
+};
+let tesk1 =new tesk(1,'to eat');
+let tesk2 =new tesk(2,'to walk');
+let tesk3 =new tesk(3,'to code');
+let tesk4 =new tesk(4,'to lunch');
+let tesk5 =new tesk(5,'to go back home');
+let tesk6 =new tesk(6,'to learn');
+let tesk7 =new tesk(7,'to talk about future');
+let tesk8 =new tesk(8,'to sleep');
+
+let tesksAll = new Map();
+tesksAll.set(tesk1,true);
+tesksAll.set(tesk2,false);
+tesksAll.set(tesk3,false);
+tesksAll.set(tesk4,true);
+tesksAll.set(tesk5,false);
+tesksAll.set(tesk6,true);
+tesksAll.set(tesk7,false);
+tesksAll.set(tesk8,true);
+// test တစ်ခုကိုအပ်ခြင်း
+function addTesk(test){
+    if(!tesksAll.has(test)){
+        tesksAll.set(test,true);
+        console.log(`id:${test.id}=> ${test.description} is added success`);
+    }else{
+        console.log(`${test.id} already exist`);
+    }
+};
+let tesk9 =new tesk(9,'to look movie');
+let tesk10 =new tesk(10,'to listen news');
+
+addTesk(tesk9);
+
+// ပြီးသွားတဲ့ tesk ကို သိမ်းခြင်း
+function completeTesk(test){
+    if(tesksAll.has(test)){
+        tesksAll.set(test,true);
+        test.complete();
+        console.log(`tesk ${test.id} completed successful`);
+    }else{
+        console.log(`tesk ${test.id} is not complete`);
+    }
+};
+completeTesk(tesk1);
+completeTesk(tesk2);
+// လုပ်ပြီးပြီလား ဆိုတာသိချင်လို့စစ်တာ
+function isTeskComplete(test){
+    if(tesksAll.has(test)){
+        return tesksAll.get(test);
+    }
+    return false;
+};
+console.log('isTeskComplete(tesk3) :>> ', isTeskComplete(tesk3));
+console.log('isTeskComplete(tesk4) :>> ', isTeskComplete(tesk4));
+console.log('tesksAll :>> ', tesksAll);
+
+const numbers = [1,1,2,2,3,3,4,4,5];
+const uniqueNumbers = Array.from(new Set(numbers));
+console.log('uniqueNumbers :>> ', uniqueNumbers);
+
+const setA = [1,2,3];
+const setB = [3,4,5];
+//union
+const union = new Set([...setA,...setB]);
+console.log('union :>> ', union);
+
+//intersection (find same value)
+const intersection = new Set([...setA].filter((x)=>{return setB.has(x)}));
+console.log('intersection :>> ', intersection);
