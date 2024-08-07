@@ -1,0 +1,9 @@
+article{
+    width: 120px;
+    margin: 50px;
+    padding: 20px;
+    background-color: lightgrey;
+}
+.show{
+    display: none;
+}

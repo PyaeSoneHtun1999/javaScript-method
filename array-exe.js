@@ -231,9 +231,76 @@ console.log('uniqueNumbers :>> ', uniqueNumbers);
 const setA = [1,2,3];
 const setB = [3,4,5];
 //union
-const union = new Set([...setA,...setB]);
-console.log('union :>> ', union);
+// const union = new Set([...setA,...setB]);
+// console.log('union :>> ', union);
 
 //intersection (find same value)
-const intersection = new Set([...setA].filter((x)=>{return setB.has(x)}));
-console.log('intersection :>> ', intersection);
+// const intersection = new Set([...setA].filter((x)=>{return setB.has(x)}));
+// console.log('intersection :>> ', intersection);
+
+
+
+// ! set exercise လုပ်ခြင်း
+//function added to the set
+const addTag = (tagSet,tag)=>{
+    tag = tag.trim().toLowerCase();
+    if(tag){
+        if(tagSet.has(tag)){
+            console.log(`tag already exist ${tag}`);
+        }else{
+            console.log(`tag adding : ${tag}`);
+            return new Set([...tagSet,tag])
+        };
+    }else{
+        console.log(`tag is does not exist`)
+    };
+    return tagSet;
+};
+//declare to the set the parameter;
+let tags = new Set();
+tags = addTag(tags,'JAVASCRIPT');
+tags = addTag(tags,'CSS');
+tags = addTag(tags,'HTML');
+tags = addTag(tags,'PYTHON');
+tags = addTag(tags,'CSS');
+
+// function remove tag from set;
+const removeTag = (tagSet,tag) =>{
+    tag = tag.trim().toLowerCase();
+    if(tagSet.has(tag)){
+        const newSet = new Set(tagSet);
+        newSet.delete(tag);
+        console.log(`tag is removed successful ${tag}:`);
+        return tagSet;
+    }else{
+        console.log(`tag is not found ;`);
+    }
+}
+removeTag(tags,'JAVASCRIPT');
+removeTag(tags,"JAVA");
+
+//function to check to the set;
+const hasTag = (tagSet,tag)=>{
+    tag = tag.trim().toLowerCase();
+    if(tagSet.has(tag)){
+        console.log(`tag has in the set; ${tag}`);
+    }else{
+        console.log(`tag is not fond in the set : ${tag}`);
+    }
+    return tagSet;
+};
+hasTag(tags,'HTML');
+hasTag(tags,'PYTHON ');
+hasTag(tags,'PhP');
+hasTag(tags,'JAVA');
+
+// function display to the set;
+const displayTag = (tagSet)=>{
+    if(tagSet.size===0){
+        console.log(`tag is not display ; `)
+    }else{
+        console.log(`ALL TAG;`)
+        tagSet.forEach(tag=>console.log(tag));
+    }
+};
+displayTag(tags);
